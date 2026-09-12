@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yukti &amp; Aviral Wedding Invitation</title>
+    <meta name="description" content="✨Explore our wedding website for all celebration details &amp; beautiful moments💖">
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/5skLnVouVShqg8KfVbGUF2qwAB13/social-images/social-1779977480027-ChatGPT_Image_May_27__2026__03_22_42_PM-removebg-preview.webp">
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@Lovable" />
+    <meta name="twitter:image" content="https://storage.googleapis.com/gpt-engineer-file-uploads/5skLnVouVShqg8KfVbGUF2qwAB13/social-images/social-1779977480027-ChatGPT_Image_May_27__2026__03_22_42_PM-removebg-preview.webp">
+
+    <meta property="og:title" content="Yukti &amp; Aviral Wedding Invitation">
+    <meta name="twitter:title" content="Yukti &amp; Aviral Wedding Invitation">
+    <meta property="og:description" content="✨Explore our wedding website for all celebration details &amp; beautiful moments💖">
+    <meta name="twitter:description" content="✨Explore our wedding website for all celebration details &amp; beautiful moments💖">
+    <script type="module" crossorigin src="/assets/index-C2s5MIIA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BJHWmf-o.css">
+    <script defer src="/~flock.js" data-proxy-url="/~api/analytics"></script>
+
+    <style>
+      #envelope-gate {
+        position: fixed;
+        inset: 0;
+        z-index: 999999;
+        background: radial-gradient(circle at center, #3a1218 0%, #1a0709 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        transition: opacity 0.6s ease;
+      }
+
+      #envelope-gate.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #envelope-gate img {
+        width: min(92vw, 480px);
+        height: auto;
+        display: block;
+        border-radius: 12px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+        animation: floatIn 1s ease-out;
+      }
+
+      #envelope-gate img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75);
+      }
+
+      #envelope-gate img:active {
+        transform: scale(0.97);
+      }
+
+      #envelope-gate p {
+        margin-top: 22px;
+        color: #e8cfa0;
+        font-family: Georgia, 'Times New Roman', serif;
+        font-size: 1.05rem;
+        letter-spacing: 1px;
+        opacity: 0.9;
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes floatIn {
+        from { opacity: 0; transform: translateY(25px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 0.6; }
+        50% { opacity: 1; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+
+    <div id="envelope-gate">
+      <img src="/envelope.jpeg" alt="Wedding invitation envelope for Yukti and Aviral" id="envelope-img" />
+      <p>✨ Tap to open our invitation ✨</p>
+    </div>
+
+    <script>
+      document.getElementById('envelope-img').addEventListener('click', function () {
+        var gate = document.getElementById('envelope-gate');
+        gate.classList.add('hidden');
+        setTimeout(function () {
+          gate.remove();
+        }, 600);
+      });
+    </script>
+  </body>
+</html>
