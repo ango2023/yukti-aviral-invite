@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yukti & Aviral Wedding Invitation</title>
+  <meta name="description" content="✨Tap the envelope to open our wedding invitation💖" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Yukti & Aviral Wedding Invitation" />
+  <meta property="og:description" content="✨Tap the envelope to open our wedding invitation💖" />
+  <meta property="og:image" content="https://ango2023.github.io/yukti-aviral-invite/envelope.jpeg" />
+  <meta property="og:url" content="https://ango2023.github.io/yukti-aviral-invite/" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yukti & Aviral Wedding Invitation" />
+  <meta name="twitter:description" content="✨Tap the envelope to open our wedding invitation💖" />
+  <meta name="twitter:image" content="https://ango2023.github.io/yukti-aviral-invite/envelope.jpeg" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background: #2b0f14;
+      background: radial-gradient(circle at center, #3a1218 0%, #1a0709 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Georgia', 'Times New Roman', serif;
+      overflow: hidden;
+    }
+
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      animation: floatIn 1s ease-out;
+    }
+
+    .wrapper img {
+      width: min(92vw, 480px);
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+      transition: transform 0.35s ease, box-shadow 0.35s ease;
+      pointer-events: none;
+    }
+
+    .wrapper:hover img {
+      transform: scale(1.03);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.75);
+    }
+
+    .wrapper:active img {
+      transform: scale(0.97);
+    }
+
+    .tap-hint {
+      margin-top: 22px;
+      text-align: center;
+      color: #e8cfa0;
+      font-size: 1.05rem;
+      letter-spacing: 1px;
+      opacity: 0.9;
+      animation: pulse 2s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.6; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper" id="envelopeWrapper" role="button" tabindex="0" aria-label="Open Yukti and Aviral's wedding invitation">
+    <img src="envelope.jpeg" alt="Wedding invitation envelope for Yukti and Aviral" />
+    <p class="tap-hint">✨ Tap to open our invitation ✨</p>
+  </div>
+
+  <script>
+    var destination = "https://pentiumyg.github.io/";
+    var el = document.getElementById('envelopeWrapper');
+
+    function goToInvitation() {
+      window.location.href = destination;
+    }
+
+    el.addEventListener('click', goToInvitation);
+    el.addEventListener('touchend', function (e) {
+      e.preventDefault();
+      goToInvitation();
+    });
+    el.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        goToInvitation();
+      }
+    });
+  </script>
+</body>
+</html>
